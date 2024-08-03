@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Correos Electrónicos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Generador de Correos Electrónicos</h1>
+        
+        <div id="auth-section">
+            <div id="register-section">
+                <h2>Registro</h2>
+                <form id="register-form">
+                    <label for="register-email">Correo Electrónico:</label>
+                    <input type="email" id="register-email" required>
+                    <label for="register-password">Contraseña:</label>
+                    <input type="password" id="register-password" required>
+                    <button type="submit">Registrarse</button>
+                </form>
+                <p>¿Ya tienes cuenta? <button id="switch-to-login">Iniciar Sesión</button></p>
+            </div>
+
+            <div id="login-section" class="hidden">
+                <h2>Iniciar Sesión</h2>
+                <form id="login-form">
+                    <label for="login-email">Correo Electrónico:</label>
+                    <input type="email" id="login-email" required>
+                    <label for="login-password">Contraseña:</label>
+                    <input type="password" id="login-password" required>
+                    <button type="submit">Iniciar Sesión</button>
+                </form>
+                <p>¿No tienes cuenta? <button id="switch-to-register">Registrarse</button></p>
+            </div>
+        </div>
+
+        <div id="app-section" class="hidden">
+            <div class="button-group">
+                <button id="generate-email">Generar Correo</button>
+                <button id="view-history">Ver Historial</button>
+                <button id="clear-history">Borrar Historial</button>
+                <button id="view-messages">Ver Mensajes</button>
+            </div>
+            <p id="email-output"></p>
+
+            <div id="history-container" class="hidden">
+                <h2>Historial de Correos</h2>
+                <ul id="history-list"></ul>
+            </div>
+
+            <div id="messages-container" class="hidden">
+                <h2>Bandeja de Mensajes</h2>
+                <ul id="message-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p class="footer-text">CREADO POR JULIAN SEVERICHE</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
